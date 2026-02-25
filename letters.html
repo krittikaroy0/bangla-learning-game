@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>অক্ষর শেখা</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+<div class="container text-center mt-5">
+    <h2 class="mb-4">অক্ষর শেখা 🅰️</h2>
+    <div id="lettersContainer" class="row justify-content-center"></div>
+</div>
+
+<script src="script.js"></script>
+<script>
+fetch('bangla_dataset.json')
+  .then(res => res.json())
+  .then(data => {
+      const container = document.getElementById('lettersContainer');
+      data.letters.forEach(item => {
+          const col = document.createElement('div');
+          col.className = 'col-md-3 col-sm-6 mb-3';
+          col.innerHTML = `
+              <div class="card p-2 shadow-sm">
+                  <img src="${item.image}" class="card-img-top" alt="${item.letter}">
+                  <div class="card-body text-center">
+                      <h3>${item.letter}</h3>
+                      <button class="btn btn-primary mt-2" onclick="new Audio('${item.audio}').play()">🔊 শুনুন</button>
+                  </div>
+              </div>`;
+          container.appendChild(col);
+      });
+  });
+</script>
+
+</body>
+</html>

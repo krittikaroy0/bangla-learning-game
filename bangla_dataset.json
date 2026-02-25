@@ -1,0 +1,16 @@
+{
+  "letters": [
+    {"letter": "অ", "image": "images/a.jpg", "audio": "audio/a.mp3"},
+    {"letter": "আ", "image": "images/aa.jpg", "audio": "audio/aa.mp3"}
+  ],
+  "words": [
+    {"word": "আপেল", "image": "images/apple.jpg", "audio": "audio/apple.mp3"},
+    {"word": "বাঘ", "image": "images/tiger.jpg", "audio": "audio/tiger.mp3"}
+  ],
+  "poems": [
+    {"title": "আয় আয় চাঁদ মামা", "poem_text": "আয় আয় চাঁদ মামা\nটিপ দিয়ে যা", "audio": "audio/moon_rhyme.mp3"}
+  ],
+  "stories": [
+    {"title": "সিংহ ও ইঁদুর", "content": "একবার এক সিংহ ঘুমাচ্ছিল...\nইঁদুর তাকে সাহায্য করল।", "audio": "audio/lion_mouse.mp3"}
+  ]
+}
